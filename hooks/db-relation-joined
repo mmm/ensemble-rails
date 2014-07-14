@@ -23,8 +23,8 @@ cd /opt/testrails/
 # should probably get same commit as first unit
 
 apt-get -y install -qq ruby-dev
-apt-get -y install -qq libmysqlclient16 libmysqlclient16-dev 
-apt-get -y install -qq libpgsql-ruby 
+apt-get -y install -qq libmysqlclient16 libmysqlclient16-dev
+apt-get -y install -qq libpgsql-ruby
 # conditional based on database_type
 
 # mysql cli for debugging
@@ -39,7 +39,7 @@ host=`relation-get host`
 database_type=`relation-get database_type`
 cat > config/database.yml <<EOS
 production:
-  adapter: ${database_type} 
+  adapter: ${database_type}
   database: ${database}
   username: ${user}
   password: ${password}
